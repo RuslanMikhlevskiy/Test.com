@@ -9,8 +9,6 @@
 <body>
 
    <div align="center">
-    <h1> Заполните данные</h1>
-    <h2> Тестируем Гит</h2>
         <form action="singup.php" method="POST">
             <input name="firstName" type="text" value="" placeholder="Имя" ><br>
 
