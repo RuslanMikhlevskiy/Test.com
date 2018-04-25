@@ -36,6 +36,5 @@ function write_to_file($fileName, $text){
         fclose($fp);
     }   
 }       
-write_to_file($fileName, $text);
 
 ?>

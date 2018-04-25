@@ -11,5 +11,5 @@ $userInfo["education"] = $_POST['education'];
 $userInfo["salary"] = $_POST['salary'];
 
 include 'lib/properties.inc.php';
-
+write_to_file($fileName, $text);
 ?>
