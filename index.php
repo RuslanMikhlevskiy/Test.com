@@ -9,7 +9,7 @@
 <body>
 
    <div align="center">
-        <form action="singup.php" method="POST">
+        <form action="signup.php" method="POST">
             <input name="firstName" type="text" value="" placeholder="Имя" ><br>
 
             <input name="lastName" type="text" value="" placeholder="Фамилия" ><br>
