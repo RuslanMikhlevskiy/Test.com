@@ -1,15 +1,8 @@
-<html>
-
-<head>
-<?php include 'inc/common_libs.inc.html'; ?>
-</head>
-
-<body>
-
-<?php include 'inc/menu.inc.html'; ?>
-
 <div class="container">
-  <form action="signup.php" method="POST" >
+
+  <h1>Person registration</h1>
+
+  <form action="/?page=signup" method="POST" >
 
     <div class="form-group row">
       <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
@@ -71,13 +64,13 @@
           <div class="form-check">
             <input class="form-check-input" type="radio" name="orientation" id="orientationRadios1" value="homo" checked>
             <label class="form-check-label" for="orientationRadios1">
-              Female
+              Homo
             </label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="orientation" id="orientationRadios2" value="hetero">
             <label class="form-check-label" for="orientationRadios2">
-              Male
+              Hetero
             </label>
           </div>
         </div>
@@ -113,7 +106,7 @@
 
     <div class="form-group row">
       <div class="col-sm-10">
-        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button type="submit" class="btn btn-primary">Sign up</button>
       </div>
     </div>
 
@@ -122,8 +115,8 @@
 
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require_once 'lib/person_storage.inc.php';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/lib/person_storage.inc.php';
 
     $userInfo = array(
         "firstName" => $_POST['firstName'],
@@ -150,7 +143,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 }
 ?>
-
-</body>
-
-</html>
